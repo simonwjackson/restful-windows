@@ -25,6 +25,9 @@ app.get('/', (req, res) => res.send('Hello World!'))
 
 app.get('/resolution/:x/:y', (req, res) => {
   const { x, y } = req.params
+
+  execShellCommand(`C:\\restful-windows\\utils\\qres\\qres.exe x=${x} y=${y} f=60`)
+
   res.json({ x, y })
 }) 
 
