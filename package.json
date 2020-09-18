@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./index.js",
+    "install": "node ./install.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/simonwjackson/restful-windows/issues"
   },
-  "homepage": "https://github.com/simonwjackson/restful-windows#readme"
+  "homepage": "https://github.com/simonwjackson/restful-windows#readme",
+  "dependencies": {
+    "node-windows": "^1.0.0-beta.5"
+  }
 }
