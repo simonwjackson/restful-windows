@@ -38,7 +38,7 @@ app.get('/game/botw', (req, res) => {
   res.json({ x, y })
 }) 
 
-app.get('/power/:flag', (req, res) => {
+app.get('/power/:type', (req, res) => {
   const { type } = req.params
   let flag = ''
 
