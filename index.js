@@ -21,7 +21,6 @@ function execShellCommand(cmd) {
   })
 }
 
-app.get('/', (req, res) => res.send('Hello World!'))
 
 app.get('/resolution/:x/:y', (req, res) => {
   const { x, y } = req.params
@@ -37,6 +36,21 @@ app.get('/game/botw', (req, res) => {
   execShellCommand(`C:\\Users\\simonwjackson\\Downloads\\cemu_1.21.1\\Cemu.exe -f -g "C:\\storage\\gaming\\software\\wii-u\\DATA\\USA\\GAMES\\The Legend of Zelda Breath of the Wild [00050000101C9400]"`)
 
   res.json({ x, y })
+}) 
+
+app.get('/power/:flag', (req, res) => {
+  const { type } = req.params
+  let flag = ''
+
+  switch (type) {
+    case 'hibernate':
+    default:
+      flag = '/h'
+  }
+
+  execShellCommand(`C:\Windows\System32\shutdown.exe ${flag}`)
+
+  res.json({ flag })
 }) 
 
 app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`))
