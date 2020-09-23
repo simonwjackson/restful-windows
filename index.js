@@ -33,7 +33,7 @@ app.get('/resolution/:x/:y', (req, res) => {
 app.get('/game/botw', (req, res) => {
   const { x, y } = req.params
  
-  execShellCommand(`C:\\Users\\simonwjackson\\Downloads\\cemu_1.21.1\\Cemu.exe -f -g "C:\\storage\\gaming\\software\\wii-u\\DATA\\USA\\GAMES\\The Legend of Zelda Breath of the Wild [00050000101C9400]"`)
+  execShellCommand(`"C:\\Users\\simonwjackson\\Downloads\\cemu_1.21.1\\Cemu.exe" -f -g "C:\\storage\\gaming\\software\\wii-u\\The Legend of Zelda Breath of the Wild [ALZE01]\\code\\U-King.rpx"`)
 
   res.json({ x, y })
 }) 
