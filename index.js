@@ -48,7 +48,7 @@ app.get('/power/:type', (req, res) => {
       flag = '/h'
   }
 
-  execShellCommand(`C:\Windows\System32\shutdown.exe ${flag}`)
+  execShellCommand(`C:\\Windows\\System32\\shutdown.exe ${flag}`)
 
   res.json({ flag })
 }) 
